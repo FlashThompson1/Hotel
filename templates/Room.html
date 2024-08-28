@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Navruz Hotel</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<style type="text/css">
+		body{
+	background-image: url(static/roomback.jpg);
+	
+}
+div.black{
+	background-color: rgba(28, 27, 27, 0.7);
+	
+}
+div.ow{
+	position: relative;
+	z-index: 100;
+}
+ul{
+	border: 2px solid #ffaa00;
+	background-color: #ffaa00;
+	border-radius: 7px;
+	text-align: center;
+	
+
+}
+p strong{
+	font-size: 23px;
+}
+li{
+	border: 1px solid #ffaa00;
+	background-color: #ffaa00;
+	border-radius: 10px;
+	list-style-type: none;
+	display: inline-flex;
+	padding: 23.5px;
+	
+
+}
+li:hover{
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 10px;
+	transition: 1s;
+}
+li a{
+	font-size: 30px;
+	font-family: serif;
+	font-weight: 700;
+	color: 	white;
+	text-decoration: none;
+}
+li a:hover{
+	color: #ffaa00;
+	transition: 1s;
+
+
+}
+/*  Надпись "Номера International"  */
+.main h1{
+	position: relative;
+	border: 5px solid #b05b05;
+	text-align: center;
+	color: whitesmoke;
+	font-weight: 900;
+}
+/* Econom Room Stats  */
+
+.Econom{
+	position: relative;
+	background-color: #b05b05;
+	border: 3px solid #b05b05;
+	border-radius: 15px;
+
+}
+.Econom img{
+	border: 1px solid #b05b05;
+	border-radius: 10px;
+	
+}
+div.Stats{
+	display: flex;
+}
+
+/* Standard Room Stats  */
+.Standard{
+	position: relative;
+	background-color: #b05b05;
+	border: 3px solid #b05b05;
+	border-radius: 15px;
+	font-size: 30px;
+
+}
+#img2{
+	position: relative;
+	border: 1px solid #b05b05;
+	height: 300px;
+	width: auto;
+	border-radius: 10px;
+}
+/* Luxe Room Stats  */
+.Luxe{
+	position: relative;
+	background-color: #b05b05;
+	border: 3px solid #b05b05;
+	border-radius: 15px;
+	font-size: 30px;
+
+}
+.Luxe img{
+	position: relative;
+	border: 1px solid #b05b05;
+	height: 350px;
+	float: right;
+	width: auto;
+	border-radius: 10px;
+}
+/* 'Подробнее ' Button  */
+#firstbut{
+	position: absolute;
+	background-color: white;
+	border: 3px solid white;
+	border-radius: 13px;
+	font-size: 18px;
+	top: 305px;
+	left: 75%;
+}
+#firstbut:hover{
+	color: #b05b05;
+	background-color: #fc8c03;
+	font-size: 20px;
+	transition: 1.5s;
+
+}
+#firstbut a{
+	color: #b05b05;
+	text-decoration: none;
+}
+#firstbut a:hover{
+	color: white;
+}
+
+
+#fourthbut{
+	position: absolute;
+	background-color: white;
+	border: 3px solid white;
+	border-radius: 13px;
+	font-size: 18px;
+	top: 300px;
+	left: 25%;
+}
+#fourthbut:hover {
+	color: #b05b05;
+	background-color: #fc8c03;
+	font-size: 20px;
+	transition: 1.5s;
+
+
+}
+#fourthbut a{
+	color: #b05b05;
+	text-decoration: none;
+}
+#fourthbut a:hover{
+	color: white;
+	
+}
+#fifthbut{
+	position: absolute;
+	background-color: white;
+	border: 3px solid white;
+	border-radius: 13px;
+	font-size: 18px;
+	top: 360px;
+	left: 75%;
+}
+#fifthbut:hover {
+	color: #b05b05;
+	background-color: #fc8c03;
+	font-size: 20px;
+	transition: 1.5s;
+
+
+}
+#fifthbut a{
+	color: #b05b05;
+	text-decoration: none;
+}
+#fifthbut a:hover{
+	color: white;
+
+}
+/* 'Забранировать' Button  */
+#sixthbut{
+
+position: absolute;
+	border: 3px solid whitesmoke;
+	background-color: whitesmoke;
+	border-radius: 13px;
+	font-size: 18px;
+	top:360px;
+	left: 58%;
+}
+#sixthbut:hover{
+	color: #b05b05;
+	background-color: green;
+	font-size: 20px;
+	transition: 1.5s;
+
+}
+#sixthbut a{
+	color: #b05b05;
+	text-decoration: none;
+	font-weight: 750;
+
+}
+#sixthbut a:hover{
+	color: white;
+}
+#secondbut{
+	position: absolute;
+	border: 3px solid whitesmoke;
+	background-color: whitesmoke;
+	border-radius: 13px;
+	font-size: 18px;
+	top:305px;
+	left: 58%;
+}
+#secondbut:hover{
+	color: #b05b05;
+	background-color: green;
+	font-size: 20px;
+	transition: 1.5s;
+
+}
+#secondbut a{
+	color: #b05b05;
+	text-decoration: none;
+	font-weight: 750;
+
+}
+#secondbut a:hover{
+	color: white;
+}
+
+
+#thirdbut{
+	position: absolute;
+	border: 3px solid whitesmoke;
+	background-color: whitesmoke;
+	border-radius: 13px;
+	font-size: 18px;
+	top: 300px;
+	left: 10%;
+}
+#thirdbut:hover{
+	color: #b05b05;
+	background-color: green;
+	font-size: 20px;
+	transition: 1.5s;
+
+}
+#thirdbut a{
+	color: #b05b05;
+	text-decoration: none;
+	font-weight: 750;
+
+}
+#thirdbut a:hover{
+	color: white;
+}
+/* Text on Center   */
+.centertext{
+	position: relative;
+	left: 39%;
+	text-align: center;
+	border: 2px solid ghostwhite;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	font-family: serif;
+	width: 300px;
+	font-weight: 1000;
+}
+
+p.roomstats{
+	color: whitesmoke;
+	font-family: serif;
+	
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ghostwhite;
+  border-radius: 5px; 
+}
+#ec{
+	height: 300px;
+	width: auto;
+}
+	</style>
+
+<div class="black">
+
+<div class="ow">
+	<ul>
+		
+		<li ><a href="/">Главная</a></li>
+		<li ><strong><a href="/rooms">Номера</a></strong></li>
+		<li ><a href="/restaurant">Ресторан</a></li>
+		<li><a href="/gardenpool">Сад & Басейн</a></li>
+		<li ><a href="/registration">Авторизоватся</a></li>
+		<li ><a href="signIn">Войти</a></li>
+		<li ><a href="/logout">Выйти</a></li>
+		
+	</ul>
+
+</div>
+
+
+<!-- Main Menu  <-->	
+	<br>
+	<br>
+	 		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  	 <div class="main"><h1><strong>Номера  Отеля <br>Navruz</strong></h1>
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+    	<div class="col-sm-12">
+      <img src="static/roomex.jpg" class="mx-auto d-block  w-50">
+  </div>
+    </div>
+    <div class="carousel-item">
+    	<div class="col-sm-12">
+      <img src="static/interroom.jpg" class="mx-auto d-block  w-50">
+  </div>
+    </div>
+    <div class="carousel-item">
+    	<div class="col-sm-12">
+      <img src="static/LuxeRoom.jpg" class="mx-auto d-block w-50">
+      </div>
+    </div>
+  </div>
+</div>
+
+	 </div>
+	 <br>
+	 <br>
+
+<!-- Rooms  <-->
+	<div class="Econom">
+			<h4 class="centertext">Номер Econom</h4>
+ 		<div class="Stats">
+	 		<img id="ec" src="static/roomex.jpg">
+	 			<p class="roomstats"><strong>Номера Econom сочетают в себе компактность и необходимый уровень удобства. Общая площадь номера 15м2. В номере имеется 'King Size' кровать с ортопедическим матрасом, комфортабельная мебель, телевизор, кондиционер, телефон и мини холодильник.
+					Также для сохранения ваших личных вещей в номере установлен надежный сейф. В стоимость номера входит завтрак, мини бар с безалкогольными напитками, посещение тренажерного зала и летнего бассейна.
+					<span style="color: black; ">Цена за один ночь: 500000 UZS</span></strong>
+
+					<br>
+				</p>
+
+	 		<button id="firstbut"><a href="Room.html"><strong>Подробнее >></strong></a></button>
+	 		<button id="secondbut"><a href="/booking">Забранировать</a></button>
+	 	</div>
+	</div>
+	<br>
+	 	<div class="Standard">
+	 			<h4 class="centertext">Номер Стандарт</h4>
+	 	 	<div class="Stats">
+	 	 	
+	 	 		<p class="roomstats"><strong>Номер имеет в себе кровать 'King Size' , кондиционер для прохладных и жарких дней, телевизор, мини холодильник, телефон, сейф и ванная комната с душевой кабиной.Общая площадь номера 20 м2.
+					А также стоимость номера входит завтрак, мини бар с безалкогольными напитками, посещение тренажерного зала.
+	 	<span style="color: black; ">Цена за один ночь: 850000 UZS</span></strong></p>
+
+
+	 	 			<img id="img2" src="static/StandardRoom.jpg">
+	 	 			<button id="fourthbut"><a href="Room.html"><strong>Подробнее >></strong></a></button>
+	 				<button id="thirdbut"><a href="/booking">Забранировать</a></button>
+	 		
+	 	 	</div>
+	 	</div>
+	 	<br>
+	 	 <div class="Luxe">
+	 	 		<h4 class="centertext">Номер Люкс</h4>
+	 	 	<div class="Stats">
+	 	 	<img src="static/roomex2.jpg">
+	 	 		<p class="roomstats"><strong>Просторный номер с удобной кроватью размера 'King Size', смарт ТВ, телефоном, мини холодильником, сейфом, шкафом для хранения одежды, отдельной рабочей зоной и индивидуальными разовыми принадлежностями. Общая площадь номера 25 м2.
+					В стоимость номера входит завтрак, мини бар с безалкогольными напитками  и посешение в наш спотивный зал.<span style="color: black; ">Цена за один ночь: 1250000 UZS</span></strong>
+
+	 		</p>
+	 			
+	 				<button id="fifthbut"><a href="Room.html"><strong>Подробнее >></strong></a></button>
+	 				<button id="sixthbut"><a href="/booking">Забранировать</a></button>
+	 			
+	 	 	
+	 	 </div>
+	 </div>
+
+	</div>
+</div>
+
+</div>
+
+
+	
+</body>
+</html>

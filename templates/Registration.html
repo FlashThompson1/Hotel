@@ -1,0 +1,237 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Navruz Hotel</title>
+</head>
+<body>
+
+<!--   ***********************************************************************************
+  CSS OPTIONS  ***********************************************************************************<-->
+
+<style type="text/css">
+
+
+
+body{
+  background-image: url(static/PrezidentRoom.jpg);
+}
+#black{
+  background-color: rgba(28, 27, 27, 0.6);
+}
+div.topnavbar{
+  position: relative;
+  bottom: 16px;
+}
+ul{
+  border: 2px solid #ffaa00;
+  background-color: #ffaa00;
+  border-radius: 7px;
+  text-align: center;
+  
+
+}
+p strong{
+  font-size: 23px;
+}
+li{
+  border: 1px solid #ffaa00;
+  background-color: #ffaa00;
+  border-radius: 10px;
+  list-style-type: none;
+  display: inline-flex;
+  padding: 25px;
+  
+
+}
+li:hover{
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+li a{
+  font-size: 30px;
+  font-family: serif;
+  font-weight: 700;
+  color:  white;
+  text-decoration: none;
+}
+li a:hover{
+  color: #ffaa00;
+  transition: 1s;
+
+
+}
+h1{
+  text-align: center;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 30px;
+  font-size: 20px;
+  color: whitesmoke;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=file] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+   border-radius: 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=file]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 2px solid ghostwhite;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 380px;
+  border-radius: 9px;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 1;
+}
+.registerbtnman{
+ background-color: white;
+  float: right;
+  border: 5px solid orange;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 20%;
+  opacity: 1;
+}
+.registerbtnman a{
+ color: blue;
+font-size: 19px;
+}
+.registerbtnman a:hover{
+  color: white;
+  transition: 1.5s;
+}
+.registerbtnman:hover{
+  background-color: blue;
+  border: 5px solid white;
+  transition: 1.5s;
+}
+/* Add a blue text color to links */
+a {
+  color: skyblue;
+  font-size: 25px;
+  text-decoration: none;
+}
+#sign{
+
+margin: 0px 550px;
+  font-weight: 900;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: burlywood;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f5791b;
+  border-radius: 5px; 
+}
+
+
+</style>
+
+
+
+
+<!-- ***************************************************************************************************** <-->
+
+<div id="black">
+  <div class="topnavbar">
+  <ul>
+    
+    <li ><a href="/">Главная</a></li>
+    <li ><strong><a href="/rooms">Номера</a></strong></li>
+    <li ><a href="/restaurant">Ресторан</a></li>
+    <li><a href="/gardenpool">Сад & Басейн</a></li>
+    <li ><a href="/registration">Авторизоватся</a></li>
+    <li ><a href="/signIn">Войти</a></li>
+    
+  </ul>
+
+</div>
+	<form method="POST" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+  <div class="container">
+    <h1>Авторизуйтесь</h1>
+
+
+    <hr>
+
+    <label for="firname"><b>{{ form.firname.label }}</b></label>
+    <input type="text" placeholder="Введите свое имя " name="firname" id="firname" required>
+
+    <label for="secname"><b>{{ form.secname.label }}</b></label>
+    <input type="text" placeholder="Введите свою фамилию " name="secname" id="secname" required>
+
+    <label for="email"><b>{{ form.email.label }}</b></label>
+    <input type="text" placeholder="Введите адрес электронный почты " name="email" id="email" required>
+
+
+    <label for="psw"><b>{{ form.psw.label}}</b></label>
+    <input type="password" placeholder="Введите пароль " name="psw" id="psw" required>
+
+    <label for="country"><b>{{form.country.label}}</b></label>
+    <input type="text" placeholder="Введите вашу страну" name="country" id="country" required>
+
+    <label for="city"><b>{{form.city.label}}</b></label>
+    <input type="text" placeholder="Введите ваш город" name="city" id="city" required>
+
+
+    <label  for="passdata"><b>{{form.passdata.label}}</b></label>
+    <input style="background-color:black;" type="file"  name="passdata" id="passdata" >
+
+
+
+<hr>
+    <button type="submit" class="registerbtn"> {{form.submit.label}} </button>
+    <p type="button" class="registerbtnman"><a href="/manregistration"><strong> Авторизоватся Как Менеджер </strong></a></p>
+  </div>
+
+
+    <p id="sign"><a href="/signIn">Уже есть аккаунт?<br>Войдите</a></p>
+</form>
+
+</div>
+
+
+</body>
+</html>
+

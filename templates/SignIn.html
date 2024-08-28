@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Navruz Hotel</title>
+
+
+<body>
+
+<style type="text/css">
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   background-image: url(static/example.jpg);
+}
+
+
+div.ow{
+	position: relative;
+	bottom: 16px;
+}
+ul{
+	border: 2px solid #ffaa00;
+	background-color: #ffaa00;
+	border-radius: 7px;
+	text-align: center;
+	
+
+}
+p strong{
+	font-size: 23px;
+}
+li{
+	border: 1px solid #ffaa00;
+	background-color: #ffaa00;
+	border-radius: 10px;
+	list-style-type: none;
+	display: inline-flex;
+	padding: 23.5px;
+	
+
+}
+li:hover{
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 10px;
+	transition: 1s;
+}
+li a{
+	font-size: 30px;
+	font-family: serif;
+	font-weight: 700;
+	color: 	white;
+	text-decoration: none;
+}
+li a:hover{
+	color: #ffaa00;
+	transition: 1s;
+
+
+}
+/* Adding styles to the form container */
+.container {
+  position: absolute;
+  margin: 130px;
+  max-width: 500px;
+  border-radius: 10px;
+  left: 20%;
+  top: 39px;
+  padding: 35px;
+  background-color: white;
+}
+#word{
+	text-align: center;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border-radius: 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: rgba(8, 207, 207, 0.5);
+  outline: none;
+}
+
+/*  Style for the Submit button */
+.buttonn {
+  background-color: #1953e6;
+  color: white;
+  font-size: 18px;
+  padding: 16px 20px;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.buttonn:hover {
+  opacity: 1;
+  transition: 1.5s;
+}
+#ss{
+	color: #fc6b03;
+	font-weight: 700;
+	font-size: 15px;
+
+}
+#gg{
+	font-weight: 700;
+	color: darkblue;
+	font-size: 15px;
+}
+p{
+	text-align: center;
+	font-weight: 700;
+
+}
+p a{
+	text-decoration: none;
+	
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f5791b;
+  border-radius: 5px; 
+}
+
+	</style>
+
+<div class="ow">
+	<ul>
+		
+		<li ><a href="/">Главная</a></li>
+		<li ><strong><a href="/rooms">Комнаты</a></strong></li>
+		<li ><a href="/restaurant">Ресторан</a></li>
+		<li><a href="/gardenpool">Сад & Басейн</a></li>
+		<li ><a href="/registration">Авторизоватся</a></li>
+		<li ><a href="/signIn">Войти</a></li>
+        <li ><a href="/logout">Выйти</a></li>
+	</ul>
+</div>
+		
+
+<div class="signingup">
+  <form method="POST" class="container">
+      {{ form.hidden_tag() }}
+    <h1 id="word"><strong >Войти</strong></h1>
+
+
+    <label for="email"><b>{{form.email.label}}</b></label>
+    <input type="text" placeholder="Введите адрес электронный почты" name="email" id="email" required>
+
+    <label for="psw"><b>{{form.psw.label}}</b></label>
+    <input type="password" placeholder="Введите пароль" name="psw" id="psw" required>
+
+
+    <button type="submit" class="buttonn">{{form.submit.label}}</button>
+    <p><a href="/passwordrec">Забыли Пароль?</a></p>
+
+    <p><a href="/registration">У вас ещё нет аккаунта?<br>Авторизуйтесь</a></p>
+
+
+    <p type="button" class="registerbtnman"><a href="/signInman"><strong> Войти Как Менеджер </strong></a></p>
+
+
+  </form>
+</div>
+
+
+
+
+
+</body>
+</head>
+</html>

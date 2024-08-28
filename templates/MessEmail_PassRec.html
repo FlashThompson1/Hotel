@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<h1>Уважаемый {{ user.firname }} {{user.secname}}<br> Переходите по ссылке чтобы востоновить ваш пароль </h1>
+<br>
+<a href="{{ url_for('newpasw', token=token, _external=True) }}">Востоновить Пароль</a>.
+
+</body>
+</html>

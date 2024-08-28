@@ -1,0 +1,170 @@
+    <title>Navruz Hotel</title>
+
+<style type="text/css">
+body{
+  background-image: url(static/backgr.jpg);
+}
+#black{
+  background-color: rgba(28, 27, 27, 0.6);
+}
+div.topnavbar{
+  position: relative;
+  bottom: 16px;
+}
+ul{
+  border: 2px solid #0ea6ed;
+  background-color: #0ea6ed;
+  border-radius: 7px;
+  text-align: center;
+}
+p strong{
+  font-size: 23px;
+}
+li{
+  border: 1px solid #0ea6ed;
+  background-color: #0ea6ed;
+  border-radius: 10px;
+  list-style-type: none;
+  display: inline-flex;
+  padding: 25px;
+}
+li:hover{
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+li a{
+  font-size: 30px;
+  font-family: serif;
+  font-weight: 700;
+  color:  white;
+  text-decoration: none;
+}
+li a:hover{
+  color: #0ea6ed;
+  transition: 1s;
+}
+/*  ******************  TABLE     OPTION    ******************  */
+table{
+    margin: 0px 200px;
+	border-collapse: collapse;
+	font-size: 24px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+table td {
+	padding: 15px;
+}
+table thead td {
+	background-color: #54585d;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 15px;
+	border: 1px solid #54585d;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid #dddfe1;
+}
+table tbody tr {
+	background-color: #f9fafb;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+.textcen{
+    text-align: center;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightblue;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f5791b;
+  border-radius: 5px;
+}
+.registerbtnman{
+ background-color: white;
+  float: right;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 20%;
+  opacity: 1;
+}
+.registerbtnman a{
+ color: blue;
+ text-decoration:none;
+font-size: 19px;
+}
+.registerbtnman a:hover{
+  color: white;
+  transition: 1.5s;
+}
+.registerbtnman:hover{
+  background-color: blue;
+  transition: 1.5s;
+}
+</style>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul id="nav" class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="page-scroll" href="/main">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a class="page-scroll" href="/main">Доходы</a>
+        </li>
+        <li class="nav-item">
+            <a class="page-scroll" href="/main">Росходы</a>
+        </li>
+        <li class="nav-item">
+            <a class="page-scroll" href="/guest_table">Список Гостей</a>
+        </li>
+        <li class="nav-item">
+            <a class="page-scroll" href="/registration">Авторизоватся</a>
+        </li>
+        <li class="nav-item">
+            <a class="page-scroll" href="/signIn">Войти</a>
+        </li>
+    </ul>
+</div>
+
+<div class="table-responsive">
+    <h1 class="textcen">Список Гостей</h1>
+    <table class="table table-bordered table-hover">
+        <tbody>
+        <thead>
+		<tr class="textcen">
+			<td >ID Номер Гостя</td>
+			<td>Имя</td>
+			<td>Фамилия</td>
+            <td>Адресс электронный почты</td>
+            <td>Пароль</td>
+            <td>Страна</td>
+            <td>Город</td>
+		</tr>
+	</thead>
+            {% for i in guests %}
+            <tr>
+                <td style="text-align: center;">{{ i.id }}</td>
+                <td>{{ i.firname }}</td>
+                <td>{{ i.secname }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.psw }}</td>
+                <td>{{ i.country }}</td>
+                <td>{{ i.city }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <p type="button" class="registerbtnman"><a href="/infoupdate"><strong>Обновить Данные</strong></a></p>
+
+
+</div>
+

@@ -1,0 +1,14 @@
+1. Unwanted DNS Requests. DNS SERVER.
+2. False Positive because on IP no one issues.
+3. List Activity. Yes IP is blacklisted by checking ipvoid.com.
+4. True Positive.
+5. Type of Detection is signature and Severity Degree is information.
+6. It's False Positive but on checking by AbuseIp.com there was found one report.
+7. Content of this event is Spam Email. Because it is an active event.
+8. Action of this event is Dropped. Dropped means it's blocked.
+9. Reference of this page www.fortiguard.com/encyclopedia/ips/48398 and CVE is CVE-2019-16759.
+10.Port number is 80 and Protocol is HTTP. This is not encrypted traffic.
+11. Scanning tool attack. It's used to get information about our open ports.
+12. Url is www.chispa-app.com. It's not a malicious url by checking Virus Total, AbuseIp and UrlScan.com.
+13. Yes it's Man-In-The-Middle Attack. Because the reference page url sends the user to another page.
+14. This is a SSH Attack and they are trying to create a SSH connection to the system. 

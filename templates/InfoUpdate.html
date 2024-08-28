@@ -1,0 +1,102 @@
+<title>Navruz Hotel</title>
+<style type="text/css">
+body{
+  background-image: url(static/backgr.jpg);
+}
+div.topnavbar{
+  position: relative;
+  bottom: 16px;
+}
+ul{
+  border: 2px solid #0ea6ed;
+  background-color: #0ea6ed;
+  border-radius: 7px;
+  text-align: center;
+
+
+}
+p strong{
+  font-size: 23px;
+}
+li{
+  border: 1px solid #0ea6ed;
+  background-color: #0ea6ed;
+  border-radius: 10px;
+  list-style-type: none;
+  display: inline-flex;
+  padding: 25px;
+
+
+}
+li:hover{
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+li a{
+  font-size: 30px;
+  font-family: serif;
+  font-weight: 700;
+  color:  white;
+  text-decoration: none;
+}
+li a:hover{
+  color: #ffaa00;
+  transition: 1s;
+
+
+}
+</style>
+
+  <div class="topnavbar">
+  <ul>
+
+    <li ><a href="/">Главная</a></li>
+    <li ><strong><a href="/rooms">Номера</a></strong></li>
+    <li ><a href="/restaurant">Ресторан</a></li>
+    <li><a href="/gardenpool">Сад & Басейн</a></li>
+    <li ><a href="/registration">Авторизоватся</a></li>
+    <li ><a href="/signIn">Войти</a></li>
+
+  </ul>
+
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <h1 class="text-center"> Обновление Данных Гостей </h1>
+   <div class="mb-3">
+        <div class="col">
+            <label class="form-label text-dark fw-bold">{{ form.firname.label }}</label>
+            {{ form.firname(class="form-control bg-dark text-light") }}
+        </div>
+       <div class="mb-3">
+            <label class="form-label text-dark fw-bold">{{ form.secname.label }}</label>
+            {{ form.secname(class="form-control bg-dark text-light") }}
+        </div>
+    </div>
+          <div class="mb-3">
+            <label class="form-label text-dark fw-bold">{{ form.email.label }}</label>
+            {{ form.email(class="form-control bg-dark text-light") }}
+
+        </div>
+
+          <div class="mb-3">
+            <label class="form-label text-dark fw-bold">{{ form.country.label }}</label>
+            {{ form.country(class="form-control bg-dark text-light") }}
+        </div>
+         <div class="mb-3">
+            <label class="form-label text-dark fw-bold">{{ form.city.label }}</label>
+            {{ form.city(class="form-control bg-dark text-light") }}
+        </div>
+    </div>
+    <br>
+     <br>
+    <div class="col text-center">
+      {{ form.submit(class="btn btn-primary btn-lg text-light" ) }}
+    </div>
+
+</form>
+

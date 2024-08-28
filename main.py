@@ -13,7 +13,9 @@ from flask_mail import  Message
 bcrypt = Bcrypt(app)
 
 
-@app.before_first_request
+
+
+@app.before_request
 def create_all():
     db.create_all()
 
@@ -184,7 +186,7 @@ def newpasw(token):
                 user_email_rec.psw = form.psw.data
                 db.session.commit()
                 return redirect('/')
-    return render_template('NewPassword.html', form=form)
+        return render_template('NewPassword.html', form=form)
 
 
 
